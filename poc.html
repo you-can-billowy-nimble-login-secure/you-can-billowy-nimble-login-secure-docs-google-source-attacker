@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drag UAF</title>
+</head>
+<body>
+    <script>
+        function execUAF() {
+            const clientX = Math.round(window.innerWidth / 2);
+            const clientY = Math.round(window.innerHeight / 2);
+
+            document.write("startDrag" + "_" + clientX + "_" + clientY);
+            document.write("crash");
+        }
+
+        window.onload = _ => execUAF();
+    </script>
+</body>
+</html>
